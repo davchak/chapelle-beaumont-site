@@ -145,9 +145,8 @@ section:not(.hero) { padding: var(--gap) var(--gutter) 0; }
 /* Give */
 section.give { background: var(--field); margin-top: var(--gap); padding-bottom: clamp(80px, 9vw, 140px); }
 .give-grid { display: grid; gap: 48px; }
-@media (min-width: 900px) { .give-grid { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); } }
-.bank > p:first-child { font-size: 1.25rem; margin-top: 0; }
-.bank dl { margin: 28px 0; }
+@media (min-width: 900px) { .give-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); } .give-grid .scan { order: -1; } }
+.bank dl { margin: 0 0 20px; }
 .bank dt { color: var(--muted); font-size: 1rem; }
 .bank dd { margin: 2px 0 22px; font-size: clamp(1.3rem, 2.4vw, 1.6rem); font-weight: 700; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
 .iban { font-variant-numeric: tabular-nums; letter-spacing: 0.03em; }
@@ -157,11 +156,13 @@ section.give { background: var(--field); margin-top: var(--gap); padding-bottom:
 }
 .copy:active { transform: scale(0.97); }
 .copy[data-copied] { background: var(--accent); color: #fff; }
-.qr { margin: 0; }
 .qr-tile { background: #fff; width: min(100%, 300px); aspect-ratio: 1; padding: 22px; display: grid; place-items: center; text-align: center; color: var(--muted); font-size: 1rem; }
 .qr-tile img { width: 100%; height: auto; }
-.qr figcaption { max-width: 32ch; margin-top: 16px; font-size: 1rem; }
-.give h3 { margin-top: 80px; }
+.give > h3 { margin-top: 80px; }
+.give-grid h3 { font-size: 1.5rem; margin-bottom: 18px; }
+.steps { margin: 0 0 24px; padding-left: 1.4em; max-width: 36ch; }
+.steps li { margin-bottom: 8px; padding-left: 4px; }
+.scan .small { margin-top: 16px; max-width: 34ch; }
 .thanks { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 16px 32px; margin: 28px 0; max-width: 46rem; }
 .thanks dt { font-weight: 700; font-variant-numeric: tabular-nums; }
 .thanks dd { margin: 0; }
