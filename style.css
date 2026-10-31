@@ -88,7 +88,8 @@ h3 { font-size: clamp(1.5rem, 2.2vw, 1.9rem); line-height: 1.1; letter-spacing: 
 @media (hover: hover) and (pointer: fine) {
   .links a:hover, .langs a:hover { text-decoration: underline; }
 }
-@media (max-width: 899px) { .links, .top .btn-small { display: none; } }
+@media (max-width: 899px) { .top .btn-small { display: none; } }
+@media (max-width: 1079px) { .links { display: none; } }
 
 /* Buttons */
 .btn {
@@ -168,6 +169,16 @@ section.give { background: var(--field); margin-top: var(--gap); padding-bottom:
 .thanks dt { font-weight: 700; font-variant-numeric: tabular-nums; }
 .thanks dd { margin: 0; }
 .small { font-size: 1rem; max-width: 60ch; }
+
+/* News: newest first; on wide screens the date sits left of the text */
+.news article { display: grid; gap: 14px 40px; max-width: 62rem; }
+.news article + article { margin-top: 56px; }
+.news h3 { font-size: 1.5rem; }
+.news p { max-width: 58ch; margin: 0; }
+@media (min-width: 900px) {
+  .news article { grid-template-columns: 14rem minmax(0, 1fr); }
+  .news article > :not(h3) { grid-column: 2; }
+}
 
 /* Story */
 .story-grid { display: grid; gap: 40px; }
