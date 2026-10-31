@@ -78,7 +78,8 @@ h3 { font-size: clamp(1.5rem, 2.2vw, 1.9rem); line-height: 1.1; letter-spacing: 
 .skip:focus { left: var(--gutter); top: 8px; z-index: 2; background: var(--ink); color: var(--ground); padding: 8px 14px; }
 
 /* Header */
-.top { display: flex; align-items: center; gap: 24px; padding: 14px var(--gutter); }
+.top { display: flex; align-items: center; gap: 24px; padding: 14px var(--gutter); background: var(--accent); color: #fff; }
+.top .btn-small { background: var(--field); color: var(--ink); }
 .wordmark { font-family: var(--serif); font-size: 1.4rem; letter-spacing: -0.01em; text-decoration: none; margin-right: auto; }
 .links, .langs { display: flex; gap: 22px; }
 .langs { gap: 12px; font-size: 1rem; }
@@ -95,7 +96,7 @@ h3 { font-size: clamp(1.5rem, 2.2vw, 1.9rem); line-height: 1.1; letter-spacing: 
   padding: 17px 30px; transition: transform 160ms var(--ease-out), background-color 160ms ease;
 }
 .btn:active { transform: scale(0.97); }
-@media (hover: hover) and (pointer: fine) { .btn:hover { background: var(--accent-hover); } }
+@media (hover: hover) and (pointer: fine) { .btn:hover { background: var(--accent-hover); } .top .btn-small:hover { background: #fff; } }
 .btn-small { padding: 10px 18px; font-size: 1rem; }
 
 /* Hero */
